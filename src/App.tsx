@@ -30,8 +30,7 @@ function App() {
         sx={{ padding: "10px" }}
       />
       <ButtonActionJS
-        lable={isButtonActive ? "JS" : "ok"}
-        // ButtonActionCB={() => setButtonActive(!isButtonActive)}
+        lable={isButtonActive ? "JS" : "ok"} // ButtonActionCB={()=> setButtonActive(!isButtonActive)}
         sx={{ padding: "10px" }}
       />
     </Box>

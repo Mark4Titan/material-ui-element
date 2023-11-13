@@ -10,17 +10,17 @@ import { useEffect, useRef, useState } from "react";
 interface PButtonAction {
   sx: SxProps<Theme>;
   load: boolean;
-  lable: string;
   disabled: boolean;
+  lable: string;
   ButtonActionCB: () => void;
 }
 
 // ()=>{}
 const ButtonAction = ({
   sx,
-  lable = "ok",
   disabled = false,
   load = false,
+  lable = "ok",
   ButtonActionCB = () => {},
 }: Partial<PButtonAction>) => {
   const [progress, setProgress] = useState(0);
@@ -57,7 +57,10 @@ const ButtonAction = ({
 
   return (
     <Box sx={sx}>
-      <Button disabled={disabled} variant='contained' onClick={ButtonActionCB}>
+      <Button
+        disabled={disabled || load}
+        variant='contained'
+        onClick={ButtonActionCB}>
         {lable}
         <LinearProgress
           sx={{
