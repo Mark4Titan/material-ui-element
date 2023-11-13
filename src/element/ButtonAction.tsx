@@ -57,7 +57,10 @@ const ButtonAction = ({
 
   return (
     <Box sx={sx}>
-      <Button disabled={disabled} variant='contained' onClick={ButtonActionCB}>
+      <Button
+        disabled={disabled || load}
+        variant='contained'
+        onClick={ButtonActionCB}>
         {lable}
         <LinearProgress
           sx={{
