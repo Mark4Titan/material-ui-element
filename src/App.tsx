@@ -15,7 +15,6 @@ function App() {
     <Box>
       <ButtonAction
         load={isButtonActive}
-        disabled={isButtonActive}
         lable={isButtonActive ? "😜" : "👀"}
         ButtonActionCB={() => setButtonActive(!isButtonActive)}
         sx={{
